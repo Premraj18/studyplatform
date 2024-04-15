@@ -19,15 +19,17 @@ const Home = () => {
           justifyContent={['center', 'space-between']}
           alignItems={'center'}
           spacing={['16', '40']}
+          marginTop={['16', '']}
         >
           <VStack
             width={'full'}
             alignItems={['center', 'flex-end']}
+            spacing={'20px'}
           >
             <Heading size={'2xl'} textAlign={['center', '']}>
               LEARN FROM THE EXPERTS
             </Heading>
-            <Text>
+            <Text textAlign={['center', 'left']} fontFamily={'cursive'}>
               Find Valuable Content At Reasonable Price.
             </Text>
             <Link to='/courses'>

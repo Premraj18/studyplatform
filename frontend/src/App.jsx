@@ -7,17 +7,17 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Header from './Components/Layout/Header';
+import Courses from './Components/courses/Courses';
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Header/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/courses' element={<Courses />} />
+      </Routes>
+    </Router>
   )
 }
 

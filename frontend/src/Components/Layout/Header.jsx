@@ -2,6 +2,7 @@ import { Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay,
 import React from 'react'
 import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri'
 import { Link } from 'react-router-dom';
+import ColorModeSwitcher from '../../ColorModeSwitcher';
 
 const Header = () => {
 
@@ -14,6 +15,7 @@ const Header = () => {
 
     return (
         <>
+            <ColorModeSwitcher/>
             <Button colorScheme='yellow' width={12} height={12} rounded={'full'} position={'fixed'} top={6} left={6}
                 onClick={onOpen}
             >
@@ -26,19 +28,19 @@ const Header = () => {
                     <DrawerHeader borderBottomWidth={'1px'}>COURSE BUNDLE</DrawerHeader>
                     <DrawerBody>
                         <VStack spacing={4} alignItems={'flex-start'}>
-                            <Link to='/'> 
+                            <Link onClick={onClose} to='/'> 
                                 <Button variant={'ghost'}>Home</Button>
                             </Link>
-                            <Link to='/courses'> 
+                            <Link onClick={onClose} to='/courses'> 
                                 <Button variant={'ghost'}>Brouse All Courses</Button>
                             </Link>
-                            <Link to='/request'> 
+                            <Link onClick={onClose} to='/request'> 
                                 <Button variant={'ghost'}>Request a Course</Button>
                             </Link>
-                            <Link to='/contact'> 
+                            <Link onClick={onClose} to='/contact'> 
                                 <Button variant={'ghost'}>Contact Us</Button>
                             </Link>
-                            <Link to='/about'> 
+                            <Link onClick={onClose} to='/about'> 
                                 <Button variant={'ghost'}>About</Button>
                             </Link>
 
